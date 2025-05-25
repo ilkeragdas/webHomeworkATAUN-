@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ana Ekran - Etkinlikler ve Duyurular</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    header .profile {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 20px;
+    }
+
+    /* Etkinlikler ve Duyurular */
+    .events-section {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .events-section h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #007bff;
+    }
+
+    .event-card {
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .event-card:last-child {
+      border-bottom: none;
+    }
+
+    .event-info {
+      max-width: 70%;
+    }
+
+    .event-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 0 0 4px 0;
+    }
+
+    .event-date {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0 0 6px 0;
+    }
+
+    .event-description {
+      font-size: 0.95rem;
+      color: #444;
+      margin: 0;
+    }
+
+    .event-status {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: green;
+      margin-right: 15px;
+      white-space: nowrap;
+    }
+
+    .btn-ticket {
+      background-color: #28a745;
+      border: none;
+      padding: 8px 14px;
+      color: white;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-ticket:hover {
+      background-color: #1e7e34;
+    }
+
+    /* Sağ sütun */
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .recommendations,
+    .weather-box,
+    .cart-box {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    }
+
+    .recommendations h3,
+    .weather-box h3,
+    .cart-box h3 {
+      margin-top: 0;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+
+    .recommendation-item {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      cursor: pointer;
+      color: #007bff;
+      text-decoration: underline;
+    }
+    .recommendation-item:last-child {
+      margin-bottom: 0;
+    }
+    .recommendation-item:hover {
+      color: #0056b3;
+    }
+
+    /* Hava durumu kutusu */
+    .weather-info {
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .weather-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Sepet kutusu */
+    .cart-box button {
+      width: 100%;
+      padding: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      background-color: #ffc107;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      color: #333;
+    }
+
+    .cart-box button:hover {
+      background-color: #e0a800;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      .event-info {
+        max-width: 100%;
+      }
+      .event-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .event-status {
+        margin: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>Etkinlik Yönetim Sistemi</div>
+    <div class="profile">Hoşgeldin, Kullanıcı!</div>
+  </header>
+
+  <main>
+    <section class="events-section">
+      <h2>Yaklaşan Etkinlikler & Duyurular</h2>
+
+      <article class="event-card">
+        <div class="event-info">
+          <h3 class="event-title">Teknoloji Zirvesi 2025</h3>
+          <p class="event-date">15 Haziran 2025</p>
+          <p class="event-description">Yenilikçi teknoloji ve startuplar buluşuyor.</p>
+        </div>
+        <div>
+          <span class="event-status" style="color: green;">Planlanabilir</span>
+          <button class="btn-ticket">Bilet Al</button>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-info">
+          <h3 class="event-title">Yaz Festivali</h3>
+          <p class="event-date">30 Haziran 2025</p>
+          <p class="event-description">Müzik, eğlence ve açık hava aktiviteleri.</p>
+        </div>
+        <div>
+          <span class="event-status" style="color: red;">Planlanamaz (Yağmur)</span>
+          <button class="btn-ticket">Bilet Al</button>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-info">
+          <h3 class="event-title">Sanat Sergisi</h3>
+          <p class="event-date">12 Temmuz 2025</p>
+          <p class="event-description">Çağdaş sanat eserleri ve atölyeler.</p>
+        </div>
+        <div>
+          <span class="event-status" style="color: green;">Planlanabilir</span>
+          <button class="btn-ticket">Bilet Al</button>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-info">
+          <h3 class="event-title">Kitap Fuarı</h3>
+          <p class="event-date">25 Temmuz 2025</p>
+          <p class="event-description">Yazarlarla söyleşiler ve yeni yayınlar.</p>
+        </div>
+        <div>
+          <span class="event-status" style="color: green;">Planlanabilir</span>
+          <button class="btn-ticket">Bilet Al</button>
+        </div>
+      </article>
+    </section>
+
+    <aside>
+      <section class="recommendations">
+        <h3>İlgi Alanlarına Göre Öneriler</h3>
+        <div class="recommendation-item">Teknoloji Atölyesi</div>
+        <div class="recommendation-item">Yoga ve Sağlık</div>
+        <div class="recommendation-item">Fotoğrafçılık Kursu</div>
+        <div class="recommendation-item">Müzik Konseri</div>
+      </section>
+
+      <section class="weather-box">
+        <h3>Hava Durumu</h3>
+        <div class="weather-info">
+          <img
+            class="weather-icon"
+            src="https://openweathermap.org/img/wn/01d@2x.png"
+            alt="Güneşli"
+          />
+          <div>
+            <div><strong>İstanbul</strong></div>
+            <div>25°C, Güneşli</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cart-box">
+        <h3>Bilet Sepeti</h3>
+<button onclick="alert('Sepet sayfasına yönlendiriliyorsunuz...'); window.location.href='sepetEkranı.html';">
+  Sepete Git
+</button>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>

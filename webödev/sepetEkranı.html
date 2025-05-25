@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilet Sepeti</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .cart-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+
+    .cart-item h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .cart-item p {
+      margin: 5px 0 0;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    .cart-price {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .total {
+      text-align: right;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+    .checkout-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .checkout-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Bilet Sepetim</header>
+
+  <div class="cart-container">
+    <div class="cart-item">
+      <div>
+        <h3>Sinema Gecesi</h3>
+        <p>25 Mayıs 2025 - İstanbul</p>
+      </div>
+      <div class="cart-price">150₺</div>
+    </div>
+
+    <div class="cart-item">
+      <div>
+        <h3>Tiyatro Gösterisi</h3>
+        <p>28 Mayıs 2025 - Ankara</p>
+      </div>
+      <div class="cart-price">200₺</div>
+    </div>
+
+    <div class="cart-item">
+      <div>
+        <h3>Konser</h3>
+        <p>30 Mayıs 2025 - İzmir</p>
+      </div>
+      <div class="cart-price">250₺</div>
+    </div>
+
+    <div class="total">Toplam: 600₺</div>
+
+    <button class="checkout-btn">Ödemeye Geç</button>
+  </div>
+
+</body>
+</html>

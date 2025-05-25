@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Giriş Yap</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: black;
+    }
+
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 30px 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+      color: black;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: black;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.6);
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    .login-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .forgot-btn {
+      background: none;
+      border: none;
+      color: #007bff;
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .forgot-btn:hover {
+      color: #0056b3;
+    }
+
+    .info-message {
+      margin-top: 15px;
+      font-size: 14px;
+      opacity: 0.85;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Sisteme Giriş</h2>
+    <form>
+      <div class="form-group">
+        <label for="email">Eposta Adresi</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Şifre</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button class="login-btn" type="submit">Giriş Yap</button>
+    </form>
+
+    <button class="forgot-btn" onclick="window.location.href='sifreDegistirme.html';">
+      Şifremi Unuttum
+    </button>
+
+    <div class="info-message">
+      İlk girişten sonra şifrenizi değiştirmeniz istenecektir.
+    </div>
+
+    <button
+      style="
+        margin-top: 25px;
+        width: 100%;
+        padding: 12px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      "
+      onclick="window.location.href='kayıtEkranı.html';"
+    >
+      Kayıt sayfasına git
+    </button>
+    <button
+      style="
+        margin-top: 25px;
+        width: 100%;
+        padding: 12px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      "
+      onclick="window.location.href='anaEkran.html';"
+    >
+      Ana Ekrana git
+    </button>
+        <button
+      style="
+        margin-top: 25px;
+        width: 100%;
+        padding: 12px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      "
+      onclick="window.location.href='adminGiris.html';"
+    >
+      Admin Girişi
+    </button>
+
+  </div>
+</body>
+</html>

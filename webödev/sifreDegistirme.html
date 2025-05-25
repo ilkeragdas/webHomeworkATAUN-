@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Şifre Değiştir</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 25px;
+    }
+    label {
+      display: block;
+      margin: 15px 0 8px;
+      font-weight: 600;
+      text-align: left;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.6);
+    }
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #28a745;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Şifre Değiştir</h2>
+    <form>
+      <label for="email">E-posta Adresi</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="newPassword">Yeni Şifre</label>
+      <input type="password" id="newPassword" name="newPassword" required />
+
+      <label for="confirmPassword">Yeni Şifre (Tekrar)</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required />
+
+      <button type="button" onclick="window.location.href='giris.html';">Güncelle</button>
+    </form>
+  </div>
+</body>
+</html>
